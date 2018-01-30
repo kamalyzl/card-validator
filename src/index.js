@@ -1,4 +1,4 @@
-
+ 
 let validCard = number => {
   let sum = 0,
     alt = false,
@@ -22,7 +22,8 @@ let validCard = number => {
     sum += num;
     i--;
   }
-  // determine if it's valid
+  // retora si es valida  
   return (sum % 10 === 0);
 };
+ 
 

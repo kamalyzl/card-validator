@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
 var validCard = function validCard(number) {
   var sum = 0,
-      alt = false,
-      i = number.length - 1,
-      // recorriendo de manera inversa
-  num = void 0;
+    alt = false,
+    i = number.length - 1,
+    // recorriendo de manera inversa
+    num = void 0;
   if (number.length !== 16) {
     return false;
   }
