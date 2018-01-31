@@ -1,54 +1,43 @@
+let persona = [
+  {
+    number: '4373471036301103',
+    name: 'Joalbert',
+    cvv: 123,
+    fechExp: '2018-01'
 
-// Clases que contienes datos creados para generar pruebas 
-class Persona {
-  constructor(number, name, cvv, fechExp) {
-    this.number = number;
-    this.name = name;
-    this.cvv = cvv;
-    this.fechExp = fechExp;
+  }, {
+    number: '4851519931403589',
+    name: 'Mariana',
+    cvv: 456,
+    fechExp: '2018-02'
+
+  }, {
+    number: '4578565808288696',
+    name: 'Alejandra',
+    cvv: 789,
+    fechExp: '2018-03'
+
   }
-}
+];
 
-const joalbert = new Persona(4578565808288696, 'Joalbert', 123, '2018-01');
-const mariana = new Persona(4694998705775813, 'Mariana', 456, '2018-02');
-const alejandra = new Persona(4260808615995621, 'Alejandra', 789, '2018-03');
-/*
-var dataPeron = {
-  'dataperson': [
-    {
-      'number': 4884358916188092,
-      'name': 'Jorge Maguina',
-      'exp': '08-2019',
-      'cvv': 562
-      
-    },
-    {
-      'number': 4329511051291559,
-      'name': 'Rosario Cajavilca',
-      'exp': '08-2018',
-      'cvv': 568
-      
-    },
-    {
-      'number': 4523324596330583,
-      'name': 'Elisa Juarez',
-      'exp': '02-2020',
-      'cvv': 985
-     
-    },
-    {
-      'number': 4523324596330583,
-      'name': 'César Munayco',
-      'exp': '05-2022',
-      'cvv': 562
-      
-    },
-    {
-      'number': 4802639110455992,
-      'name': 'Percy Soto',
-      'exp': '01-2021',
-      'cvv': 253
+document.getElementById('send').addEventListener('click', function() {
+  // Trayendo valores de los inputs
+  const cardNumber = document.getElementById('card-number').value;
+  const cvv = parseInt(document.getElementById('cvv').value);
+  const name = document.getElementById('name').value;
+
+  // Obteniendo los datos del cliente en base a su número de tarjeta
+  const client = persona.filter((val) => val.number == cardNumber)[0];
+
+  // Solo pasará a validar los siguientes datos si se encuentra el número de tarjeta ingresado en la data
+  if (client) {
+    // Validando si los demás inputs son correctos
+    if (client.name == name && client.cvv == cvv) {
+      console.log(client.name);
+      console.log(client.cvv);
+      console.log('este usuario es correcto');
     }
-  ]
-};
-*/
+  } else {
+    console.log('El usuario no es válido');
+  }
+});

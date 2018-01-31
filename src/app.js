@@ -1,5 +1,13 @@
 const cl = console.log; // Para realizar pruebas en etapa de desarrollo
 
+// Iteramos el objeto persona y devolvemos un array de cada una de sus popiedades
+
+let dateName = persona.map((val, index, array) => val.name),
+  dateNumber = persona.map((val, index, array) => val.number),
+  dateCvv = persona.map((val, index, array) => val.cvv),
+  dateFechExp = persona.map((val, index, array) => val.fechExp);
+  cl(dateName);
+
 // Llamando al DOM
 let number = document.getElementById('cn'),
   btn = document.getElementById('btn'),
@@ -13,7 +21,7 @@ let verifyNumber = false, verifyName = false, verifyCvv = false, verifyExp = fal
 // Función que condiciona el número de tarjeta
 let validNumber = () => {
   let val = number.value;
-  if (card.validCard(val) && val.length === 16) {
+  if ($.validCard(val) && val.length === 16) {
     btnActive();
     verifyNumber = true;
     return true;
@@ -26,28 +34,32 @@ let validNumber = () => {
 let validName = () => {
   let name = document.getElementById('name');
   let val = name.value;
-  let regex = /^[a-zA-Z\s]*$/;
-  if (regex.test(val) && val.length > 3) {
-    verifyName = true;
-    btnActive();
-    return true;
-  } else {
-    btnDesactive();
-    return false;
+  for (const value of dateName) {
+    if (val === value) {
+      verifyName = true;
+      cl(verifyName);
+      btnActive();
+      return true;
+    } else {
+      btnDesactive();
+      return false;
+    }
   }
+
 };
 
 // Función que valida CVV, solo permite 3 digitos
 let validCvv = () => {
   let cvv = document.getElementById('cvv');
   let value = cvv.value;
-  let regex = /^\d{3}/;
-  if (regex.test(value)) {
-    verifyCvv = true;
-    cvv.setAttribute('disabled', true);
-    btnActive();
-  } else {
-    btnDesactive();
+  for (const val of dateCvv) {
+    if (value === val) {
+      verifyCvv = true;
+      cvv.setAttribute('disabled', true);
+      btnActive();
+    } else {
+      btnDesactive();
+    }
   }
 };
 
@@ -75,16 +87,38 @@ btnDesactive = () => {
   btn.disabled = true;
 };
 
+button = () => {
+  alert('valido!');
+};
 // Eventos
 cvv.addEventListener('keyup', validCvv);
 name.addEventListener('keyup', validName);
 number.addEventListener('keyup', validNumber);
-exp.addEventListener('change', validExp);
+// exp.addEventListener('change', validExp);
 btn.addEventListener('click', button);
 
 
-console.log(joalbert.name);
-// console.log(joalbert.cvv);
-// console.log(joalbert.fechExp);
-// console.log(mariana);
-// console.log(alejandra);
+/*
+// Llamando a la data 
+document.getElementById('send').addEventListener('click', function () {
+  // Trayendo valores de los inputs
+  const cardNumber = document.getElementById('card-number').value;
+  const cvv = parseInt(document.getElementById('cvv').value);
+  const name = document.getElementById('name').value;
+
+  // Obteniendo los datos del cliente en base a su número de tarjeta
+  const client = persona.filter((val) => val.number == cardNumber)[0];
+
+  // Solo pasará a validar los siguientes datos si se encuentra el número de tarjeta ingresado en la data
+  if (client) {
+    // Validando si los demás inputs son correctos
+    if (client.name == name && client.cvv == cvv) {
+      console.log(client.name);
+      console.log(client.cvv);
+      console.log('este usuario es correcto');
+    }
+  } else {
+    console.log('El usuario no es válido');
+  }
+});
+*/
