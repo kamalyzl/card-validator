@@ -2,10 +2,11 @@ const cl = console.log; // Para realizar pruebas en etapa de desarrollo
 
 // Iteramos el objeto persona y devolvemos un array de cada una de sus popiedades
 
-let dateName = personas.map((val, index, array) => cl(val === joalbert)),
-  dateNumber = personas.map((val, index, array) => cl(val.number)),
-  dateCvv = personas.map((val, index, array) => cl(val.cvv)),
-  dateFechExp = personas.map((val, index, array) => cl(val.fechExp));
+let dateName = persona.map((val, index, array) => val.name),
+  dateNumber = persona.map((val, index, array) => val.number),
+  dateCvv = persona.map((val, index, array) => val.cvv),
+  dateFechExp = persona.map((val, index, array) => val.fechExp);
+  cl(dateName);
 
 // Llamando al DOM
 let number = document.getElementById('cn'),
@@ -33,11 +34,8 @@ let validNumber = () => {
 let validName = () => {
   let name = document.getElementById('name');
   let val = name.value;
-  for (const value of personas) {
-    cl(val);
-    cl(personas);
-    cl(value.name);
-    if (val === value.name && val.length > 3) {
+  for (const value of dateName) {
+    if (val === value) {
       verifyName = true;
       cl(verifyName);
       btnActive();
@@ -96,5 +94,31 @@ button = () => {
 cvv.addEventListener('keyup', validCvv);
 name.addEventListener('keyup', validName);
 number.addEventListener('keyup', validNumber);
-exp.addEventListener('change', validExp);
+// exp.addEventListener('change', validExp);
 btn.addEventListener('click', button);
+
+
+/*
+// Llamando a la data 
+document.getElementById('send').addEventListener('click', function () {
+  // Trayendo valores de los inputs
+  const cardNumber = document.getElementById('card-number').value;
+  const cvv = parseInt(document.getElementById('cvv').value);
+  const name = document.getElementById('name').value;
+
+  // Obteniendo los datos del cliente en base a su número de tarjeta
+  const client = persona.filter((val) => val.number == cardNumber)[0];
+
+  // Solo pasará a validar los siguientes datos si se encuentra el número de tarjeta ingresado en la data
+  if (client) {
+    // Validando si los demás inputs son correctos
+    if (client.name == name && client.cvv == cvv) {
+      console.log(client.name);
+      console.log(client.cvv);
+      console.log('este usuario es correcto');
+    }
+  } else {
+    console.log('El usuario no es válido');
+  }
+});
+*/

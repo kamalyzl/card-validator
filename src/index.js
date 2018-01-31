@@ -1,11 +1,10 @@
 // Utilizamos el patron IIFE, Expresión de función inmediatamente invocada, función anonima auto ejecutable
 // Así prevenimos el Hoisting
 
-
-(function () {
+(function() {
   // Objeto Card contiene función ValidCard
   let card = {
-    validCard: number => {
+    validCard: number => {  
       let sum = 0,
         alt = false,
         i = number.length - 1, // recorriendo de manera inversa
