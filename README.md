@@ -19,13 +19,13 @@ Este repositorio incluye los siguientes archivos:
 2. Agregar archivo en un documento `html` como un `script`
  
 ```js
- <script src="lib/index.js"></script>
+ <script src="index.js"></script>
  ```
 
-3. Utilizar la función `validCard()` e incluir el número de la tarjeta como parámetro, esta acción te devolverá un valor booleano (true or false).
+3. Utilizar la función `$.validCard('parámetro')` e incluir el número de la tarjeta como parámetro, esta acción te devolverá un valor booleano (true or false) .
 
 ```js
- validCard('4578565808288696');
+ $.validCard(cardNumber)
  ```
 
 ### Descargar el proyecto

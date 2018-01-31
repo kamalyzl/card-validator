@@ -11,28 +11,70 @@
 </head>
 
 <body>
+  <nav>
+      <ul class="ed-menu l-horizontal nav-bar">
+        
+          <li><a href="https://github.com/kamalyzl/card-validator/blob/master/README.md">Instrucciones de instalación</a></li>
+          <li><a href="https://github.com/kamalyzl/card-validator">Github</a></li>
+        </ul>
+  </nav>
   <header>
     <h1 class="title">Validador de Tarjeta de Crédito</h1>
   </header>
+
+  <div class="ed-container">
+    <div class="ed-item m-30">
+      <h3>Descripción</h3>
+      <p> ValidCard fue creado basado en JavaScript ES5, puedes usarlo al momento de realizar un nuevo proyecto y necesites validar
+        una tarjeta de crédito y datos, como CVV, fecha de expiración y nombres completos. Funciona en los siguientes navegadores:
+        Chrome en Windows XP, IE 8, 9 y 10 en Windows 7, IE 11 en Windows 10, Firefox en Linux, esto debido a que está en
+        ES5.
+      </p>
+    </div>
+    <div class="ed-item m-50">
+      <h3>Datos que te servirán como ejemplo</h3>
+      <div class="ed-item m-60">
+        <p> Número de tarjeta: 4373471036301103
+          <br> Nombre y apellido: Maria Lopez
+          <br> cvv: 123
+          <br> Fecha de expiración: 06/20</p>
+        <hr>
+        <p>Número de tarjeta: 4851519931403589
+          <br> Nombre y apellido: Juan Perez
+          <br> cvv: 456
+          <br> Fecha de expiración: 06/22</p>
+        <hr>
+        <p>Número de tarjeta: 4578565808288696
+          <br> Nombre y apellido: Alejandra Garcia
+          <br> cvv: 789
+          <br> Fecha de expiración: 06/25</p>
+      </div>
+    </div>
+  </div>
+
+
 
   <div class="demo">
     <form class="payment-card">
       <div class="bank-card">
         <div class="bank-card__side bank-card__side_front">
           <div class="bank-card__inner">
-            <label class="bank-card__label bank-card__label_holder">
-              <span class="bank-card__hint">Nombre completo</span>
-              <input type="text" class="bank-card__field" placeholder="Nombre completo" pattern="[A-Za-z, ]{2,}" name="holder-card" id="name"
-                required>
-            </label>
-          </div>
-          <div class="bank-card__inner">
             <label class="bank-card__label bank-card__label_number">
               <span class="bank-card__hint">Número de tarjeta</span>
-              <input type="text" class="bank-card__field" placeholder="Numero de tarjeta" pattern="[0-9]{16}" name="number-card" id="cn"
-                required>
+              <input type="text" class="bank-card__field" placeholder="Ej: xxxx xxxx xxxx xxxx" pattern="[0-9]{16}" name="number-card"
+                id="cn" required>
             </label>
           </div>
+
+          <div class="bank-card__inner">
+            <label class="bank-card__label bank-card__label_holder">
+              <span class="bank-card__hint">Nombre completo</span>
+              <input type="text" class="bank-card__field" placeholder="Nombre y primer apellido" pattern="[A-Za-z, ]{2,}" name="holder-card"
+                id="name" required>
+            </label>
+          </div>
+
+
           <div class="bank-card__inner">
             <span class="bank-card__caption">validando</span>
           </div>
@@ -62,9 +104,13 @@
       </div>
     </form>
   </div>
-  <footer class="footer">
+
+
+
+  <div class="footer">
     <a class="melnik909" rel="noopener noreferrer">Gracias por la preferencia</a>
-  </footer>
+  </div>
+
 
 
   <!-- Aqui está la versión ES6 - Esta habilitada para hacer pruebas -->

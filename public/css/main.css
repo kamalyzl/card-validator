@@ -3,6 +3,8 @@
 * demo styles
 */
 
+
+
 @media screen and (min-width: 768px){
 
     html{
@@ -10,17 +12,13 @@
     }
   }
   
-  @media screen and (max-width: 767px){
-  
-    html{
-      font-size: 55%;
-    }
-  }
+ 
   
   body{
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Open Sans", "Helvetica Neue", "Segoe UI", sans-serif;
-    font-size: 1.6rem;
-    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem; 
+    background: #d2cfd4;
+
   }
   
   .demo{
@@ -278,5 +276,4 @@
   .title {
     text-align: center;
   }
-
-  
+ 
