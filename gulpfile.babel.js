@@ -6,7 +6,11 @@ const babel = require('gulp-babel');
 // gulp.watch() observa cambio
 gulp.task('es6', () => {
   gulp.src('src/*.js')
-    .pipe(babel()) // pasa datos
+    .pipe(babel({
+      "presets": [
+        "env"
+      ]
+    })) // pasa datos
     .pipe(gulp.dest('public/js/'));
 });
 
