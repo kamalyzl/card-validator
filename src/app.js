@@ -1,5 +1,12 @@
 const cl = console.log; // Para realizar pruebas en etapa de desarrollo
 
+// Iteramos el objeto persona y devolvemos un array de cada una de sus popiedades
+
+let dateName = personas.map((val, index, array) => cl(val === joalbert)),
+  dateNumber = personas.map((val, index, array) => cl(val.number)),
+  dateCvv = personas.map((val, index, array) => cl(val.cvv)),
+  dateFechExp = personas.map((val, index, array) => cl(val.fechExp));
+
 // Llamando al DOM
 let number = document.getElementById('cn'),
   btn = document.getElementById('btn'),
@@ -13,7 +20,7 @@ let verifyNumber = false, verifyName = false, verifyCvv = false, verifyExp = fal
 // Función que condiciona el número de tarjeta
 let validNumber = () => {
   let val = number.value;
-  if (card.validCard(val) && val.length === 16) {
+  if ($.validCard(val) && val.length === 16) {
     btnActive();
     verifyNumber = true;
     return true;
@@ -26,28 +33,35 @@ let validNumber = () => {
 let validName = () => {
   let name = document.getElementById('name');
   let val = name.value;
-  let regex = /^[a-zA-Z\s]*$/;
-  if (regex.test(val) && val.length > 3) {
-    verifyName = true;
-    btnActive();
-    return true;
-  } else {
-    btnDesactive();
-    return false;
+  for (const value of personas) {
+    cl(val);
+    cl(personas);
+    cl(value.name);
+    if (val === value.name && val.length > 3) {
+      verifyName = true;
+      cl(verifyName);
+      btnActive();
+      return true;
+    } else {
+      btnDesactive();
+      return false;
+    }
   }
+
 };
 
 // Función que valida CVV, solo permite 3 digitos
 let validCvv = () => {
   let cvv = document.getElementById('cvv');
   let value = cvv.value;
-  let regex = /^\d{3}/;
-  if (regex.test(value)) {
-    verifyCvv = true;
-    cvv.setAttribute('disabled', true);
-    btnActive();
-  } else {
-    btnDesactive();
+  for (const val of dateCvv) {
+    if (value === val) {
+      verifyCvv = true;
+      cvv.setAttribute('disabled', true);
+      btnActive();
+    } else {
+      btnDesactive();
+    }
   }
 };
 
@@ -75,16 +89,12 @@ btnDesactive = () => {
   btn.disabled = true;
 };
 
+button = () => {
+  alert('valido!');
+};
 // Eventos
 cvv.addEventListener('keyup', validCvv);
 name.addEventListener('keyup', validName);
 number.addEventListener('keyup', validNumber);
 exp.addEventListener('change', validExp);
 btn.addEventListener('click', button);
-
-
-console.log(joalbert.name);
-// console.log(joalbert.cvv);
-// console.log(joalbert.fechExp);
-// console.log(mariana);
-// console.log(alejandra);
