@@ -38,7 +38,7 @@ Luego debes copiar el archivo index.js a tu carpeta donde tienes los archivos js
 
 ##  Plan de trabajo en quipo
 * La Delegación de tareas lo encontrarás en los ` issues`. 
-* Por otro lado, este trabajo se ha venido realizando en un **repositorio distinto a este** por lo que pueden visitar y verificar los commits realizados anterioment en : [JackelineGCP](https://github.com/JackelineGCP/validadorTarjetaCredito/commits/master)
+* Por otro lado, este trabajo se ha venido realizando en un **repositorio distinto a este** por lo que pueden visitar y verificar los commits realizados anteriomente en : [JackelineGCP](https://github.com/JackelineGCP/validadorTarjetaCredito/commits/master)
 
 
  
