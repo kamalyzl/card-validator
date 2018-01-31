@@ -10,7 +10,7 @@ btn.addEventListener('click', function () {
     mm = document.getElementById('MM').value,
     cvv = document.getElementById('cvv').value;
 
-  // Obteniendo los datos de  l cliente en base a su número de tarjeta
+  // Obteniendo los datos del cliente en base a su número de tarjeta
   if ($.validCard(cardNumber)) {
     const client = persona.filter((val) => val.number === cardNumber)[0];
 
@@ -26,5 +26,19 @@ btn.addEventListener('click', function () {
   } else {
     alert('El usuario no es válido')
   }
+
+//Creando las validaciones para el input Number of card.....
+/* 
+const expNum = /[^0-9]/g;
+const expLet = /[^a-zA-ZÑñáéíóúÁÉÍÓÚ\s]*$/g;
+
+var inputNumber = document.getElementById('cn');
+inputNumber.addEventListener('input', function (){
+  var cardInput = value;
+  if(value.leng>=16){
+
+  }
+
+}); */
 
 })
