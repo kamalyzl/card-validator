@@ -36,6 +36,3 @@
     window.card = window.$ = card;
   } else console.log('hiciste uso de la libreria');
 })();
-
-
-console.log(card.validCard('4578565808288696'));

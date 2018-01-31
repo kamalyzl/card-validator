@@ -1,18 +1,26 @@
-let persona = [
+const persona = [
   {
     number: '4373471036301103',
     name: 'Joalbert',
     cvv: 123,
-    fechExp: '2018-01'
+    yy: 20,
+    mm: 06
+
   }, {
     number: '4851519931403589',
     name: 'Mariana',
     cvv: 456,
-    fechExp: '2018-02'
+    yy: 22,
+    mm: 06
+
+
   }, {
     number: '4578565808288696',
     name: 'Alejandra',
     cvv: 789,
-    fechExp: '2018-03'
+    yy: 25,
+    mm: 06
+
+
   }
 ];
