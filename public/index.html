@@ -12,48 +12,58 @@
 
 <body>
   <nav>
-      <ul class="ed-menu l-horizontal nav-bar">
-        
-          <li><a href="https://github.com/kamalyzl/card-validator/blob/master/README.md">Instrucciones de instalación</a></li>
-          <li><a href="https://github.com/kamalyzl/card-validator">Github</a></li>
-        </ul>
+    <ul class="ed-menu l-horizontal nav-bar">
+      <li>
+        <a href="https://github.com/kamalyzl/card-validator">Github</a>
+      </li>
+    </ul>
   </nav>
   <header>
     <h1 class="title">Validador de Tarjeta de Crédito</h1>
   </header>
 
   <div class="ed-container">
-    <div class="ed-item m-30">
+    <div class="ed-item m-1-3">
       <h3>Descripción</h3>
-      <p> ValidCard fue creado basado en JavaScript ES5, puedes usarlo al momento de realizar un nuevo proyecto y necesites validar
-        una tarjeta de crédito y datos, como CVV, fecha de expiración y nombres completos. Funciona en los siguientes navegadores:
-        Chrome en Windows XP, IE 8, 9 y 10 en Windows 7, IE 11 en Windows 10, Firefox en Linux, esto debido a que está en
-        ES5.
+      <p>ValidCard es una librería creada para facilitarte la utilidad al momento de querer validar una tarjeta de crédito.
+        <br>
+        <h4>Considerar</h4>
+        <ol>
+          <li> Solo puedes ingresar números de 16 dígitos</li>
+          <li> Si tienes una base de datos, puedes anexarla para realizar tus validaciones.</li>
+        </ol>
+
+
       </p>
     </div>
-    <div class="ed-item m-50">
+    <div class="ed-item m-1-3">
       <h3>Datos que te servirán como ejemplo</h3>
       <div class="ed-item m-60">
         <p> Número de tarjeta: 4373471036301103
-          <br> Nombre y apellido: Maria Lopez
+          <br> Nombre y apellido: Maria
           <br> cvv: 123
           <br> Fecha de expiración: 06/20</p>
         <hr>
         <p>Número de tarjeta: 4851519931403589
-          <br> Nombre y apellido: Juan Perez
+          <br> Nombre y apellido: Juan
           <br> cvv: 456
           <br> Fecha de expiración: 06/22</p>
         <hr>
         <p>Número de tarjeta: 4578565808288696
-          <br> Nombre y apellido: Alejandra Garcia
+          <br> Nombre y apellido: Alejandra
           <br> cvv: 789
           <br> Fecha de expiración: 06/25</p>
       </div>
     </div>
+    <div class="ed-item m-1-3">
+      <h3>Números de tarjeta de crédito erróneos</h3>
+      <p> 1234567890123456
+        <br> 0987654321234567</p>
+    </div>
   </div>
 
 
-
+  <!-- Inicio del demo -->
   <div class="demo">
     <form class="payment-card">
       <div class="bank-card">
@@ -65,16 +75,12 @@
                 id="cn" required>
             </label>
           </div>
-
           <div class="bank-card__inner">
             <label class="bank-card__label bank-card__label_holder">
               <span class="bank-card__hint">Nombre completo</span>
-              <input type="text" class="bank-card__field" placeholder="Nombre y primer apellido" pattern="[A-Za-z, ]{2,}" name="holder-card"
-                id="name" required>
+              <input type="text" class="bank-card__field" placeholder="Nombre" pattern="[A-Za-z, ]{2,}" name="holder-card" id="name" required>
             </label>
           </div>
-
-
           <div class="bank-card__inner">
             <span class="bank-card__caption">validando</span>
           </div>
@@ -104,9 +110,6 @@
       </div>
     </form>
   </div>
-
-
-
   <div class="footer">
     <a class="melnik909" rel="noopener noreferrer">Gracias por la preferencia</a>
   </div>
@@ -114,12 +117,13 @@
 
 
   <!-- Aqui está la versión ES6 - Esta habilitada para hacer pruebas -->
-  <script src="../src/index.js"></script>
-  <script src="../src/data.js"></script>
-  <script src="../src/app.js"></script>
+  <!-- <script src="../src/index.js"></script> -->
+  <!-- <script src="../src/data.js"></script> -->
+  <!-- <script src="../src/app.js"></script> -->
   <!-- Enlazamos libreria-->
-  <!-- <script src="js/index.js"></script> -->
-  <!-- <script src="js/app.js"></script> -->
+  <script src="js/index.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

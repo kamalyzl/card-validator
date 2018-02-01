@@ -1,11 +1,10 @@
 # Libreria ValidCard
 
 
- 
-- [Contenido](#Contenido)
-- [Instrucciones de instalación](#Instrucciones-de-instalación)
+- [Contenido](#contenido)
+- [Instrucciones de instalación](#instrucciones-de-instalación)
 - [Documentación](https://kamalyzl.github.io/card-validator/public/index.html)
-- [Plan de trabajo](#Plan-de-trabajo)
+- [Plan de trabajo](#plan-de-trabajo)
 
 ValidCard  es un libreria basada en el algoritmo de  [Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn), te ayudará a saber si una tarjeta de crédito es válida o invalida. Puedes usar datos como: fecha de vencimiento, código de verificación (cvv) y nombre completo que aparece en la tarjeta.
 
@@ -40,9 +39,6 @@ src/
 ```js
  $.validCard(cardNumber)
  ```
-
-
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in the `_scripts.html` include.
 
 
 ## Plan de trabajo
