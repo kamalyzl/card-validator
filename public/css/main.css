@@ -2,6 +2,16 @@
 /*
 * demo styles
 */
+ul.ed-menu.l-horizontal.nav-bar a {
+  color: white;
+}
+ul.ed-menu.l-horizontal.nav-bar {
+background:  #335299;
+font-weight: bolder;
+font-size: 1.5em;
+ 
+}
+
 
 @media screen and (min-width: 768px){
 
@@ -10,17 +20,12 @@
     }
   }
   
-  @media screen and (max-width: 767px){
-  
-    html{
-      font-size: 55%;
-    }
-  }
+ 
   
   body{
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Open Sans", "Helvetica Neue", "Segoe UI", sans-serif;
-    font-size: 1.6rem;
-    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem; 
+
   }
   
   .demo{
@@ -278,5 +283,4 @@
   .title {
     text-align: center;
   }
-
-  
+ 
