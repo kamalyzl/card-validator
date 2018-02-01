@@ -33,6 +33,6 @@
   };
   // Para proteger los datos realizamos lo siguiente
   if (typeof window.card === 'undefined') {
-    window.card = window.$ = card;
+    window.card = window.card = card;
   } else console.log('hiciste uso de la libreria');
 })();

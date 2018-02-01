@@ -28,13 +28,13 @@ src/
 1. Descargar el archivo `index.js`.
 2. Copiar el archivo `index.js` a tu carpeta donde tienes los archivos js
 
-2. Agregar archivo en un documento `html` como un `script`
+3. Agregar archivo en un documento `html` como un `script`
  
 ```js
  <script src="js/index.js"></script>
  ```
 
-3. Utilizar la función `$.validCard('parámetro')` e incluir el número de la tarjeta como parámetro, esta acción te devolverá un valor booleano (true or false) .
+4. Utilizar la función `$.validCard('parámetro')` e incluir el número de la tarjeta como parámetro, esta acción te devolverá un valor booleano (true or false) .
 
 ```js
  $.validCard(cardNumber)

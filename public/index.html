@@ -6,124 +6,249 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="vendors/ed-grid.min.css">
-  <title>Validador de Tarjeta de Crédito</title>
+  <link rel="stylesheet" href="css/demo.css">
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <title>Libreria</title>
 </head>
 
 <body>
-  <nav>
-    <ul class="ed-menu l-horizontal nav-bar">
-      <li>
-        <a href="https://github.com/kamalyzl/card-validator">Github</a>
-      </li>
-    </ul>
+
+  <!-- Navegador -->
+  <nav class="navbar navbar-light bg-dark text-white">
+    <a class="navbar-brand text-white" href="https://github.com/kamalyzl/card-validator">
+      <i class="fab fa-github"></i> Github
+    </a>
+    <a class="navbar-brand text-white" href="js/index.js" download="Acme Documentation (ver. 2.0.1).txt">
+      <i class="fas fa-download"></i> Descarga
+    </a>
   </nav>
-  <header>
-    <h1 class="title">Validador de Tarjeta de Crédito</h1>
+
+  <header class="d-flex justify-content-center mt-4">
+    <h2 class="text-center">Valida datos de tarjetas de crédito</h2>
+    <i class="far fa-credit-card"></i>
   </header>
 
-  <div class="ed-container">
-    <div class="ed-item m-1-3">
-      <h3>Descripción</h3>
-      <p>ValidCard es una librería creada para facilitarte la utilidad al momento de querer validar una tarjeta de crédito.
-        <br>
-        <h4>Considerar</h4>
-        <ol>
-          <li> Solo puedes ingresar números de 16 dígitos</li>
-          <li> Si tienes una base de datos, puedes anexarla para realizar tus validaciones.</li>
-        </ol>
-
-
-      </p>
-    </div>
-    <div class="ed-item m-1-3">
-      <h3>Datos que te servirán como ejemplo</h3>
-      <div class="ed-item m-60">
-        <p> Número de tarjeta: 4373471036301103
-          <br> Nombre y apellido: Maria
-          <br> cvv: 123
-          <br> Fecha de expiración: 06/20</p>
-        <hr>
-        <p>Número de tarjeta: 4851519931403589
-          <br> Nombre y apellido: Juan
-          <br> cvv: 456
-          <br> Fecha de expiración: 06/22</p>
-        <hr>
-        <p>Número de tarjeta: 4578565808288696
-          <br> Nombre y apellido: Alejandra
-          <br> cvv: 789
-          <br> Fecha de expiración: 06/25</p>
-      </div>
-    </div>
-    <div class="ed-item m-1-3">
-      <h3>Números de tarjeta de crédito erróneos</h3>
-      <p> 1234567890123456
-        <br> 0987654321234567</p>
-    </div>
-  </div>
-
-
-  <!-- Inicio del demo -->
-  <div class="demo">
-    <form class="payment-card">
-      <div class="bank-card">
-        <div class="bank-card__side bank-card__side_front">
-          <div class="bank-card__inner">
-            <label class="bank-card__label bank-card__label_number">
-              <span class="bank-card__hint">Número de tarjeta</span>
-              <input type="text" class="bank-card__field" placeholder="Ej: xxxx xxxx xxxx xxxx" pattern="[0-9]{16}" name="number-card"
-                id="cn" required>
-            </label>
-          </div>
-          <div class="bank-card__inner">
-            <label class="bank-card__label bank-card__label_holder">
-              <span class="bank-card__hint">Nombre completo</span>
-              <input type="text" class="bank-card__field" placeholder="Nombre" pattern="[A-Za-z, ]{2,}" name="holder-card" id="name" required>
-            </label>
-          </div>
-          <div class="bank-card__inner">
-            <span class="bank-card__caption">validando</span>
-          </div>
-          <div class="bank-card__inner bank-card__footer">
-            <label class="bank-card__label bank-card__month">
-              <span class="bank-card__hint">Month</span>
-              <input type="text" class="bank-card__field" placeholder="MM" maxlength="2" pattern="[0-9]{2}" name="mm-card" id="MM" required>
-            </label>
-            <span class="bank-card__separator">/</span>
-            <label class="bank-card__label bank-card__year">
-              <span class="bank-card__hint">Year</span>
-              <input type="text" class="bank-card__field" placeholder="YY" maxlength="2" pattern="[0-9]{2}" name="year-card" id="YY" required>
-            </label>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- Inicio del demo -->
+        <div class="demo">
+          <form class="payment-card">
+            <div class="bank-card">
+              <div class="bank-card__side bank-card__side_front">
+                <div class="bank-card__inner">
+                  <label class="bank-card__label bank-card__label_number">
+                    <span class="bank-card__hint">Número de tarjeta</span>
+                    <input type="text" class="bank-card__field" placeholder="Ej: xxxx xxxx xxxx xxxx" pattern="[0-9]{16}" name="number-card"
+                      id="cn" required>
+                  </label>
+                </div>
+                <div class="bank-card__inner">
+                  <label class="bank-card__label bank-card__label_holder">
+                    <span class="bank-card__hint">Nombre completo</span>
+                    <input type="text" class="bank-card__field" placeholder="Nombre" pattern="[A-Za-z, ]{2,}" name="holder-card" id="name" required>
+                  </label>
+                </div>
+                <div class="bank-card__inner">
+                  <span class="bank-card__caption">validando</span>
+                </div>
+                <div class="bank-card__inner bank-card__footer">
+                  <label class="bank-card__label bank-card__month">
+                    <span class="bank-card__hint">Month</span>
+                    <input type="text" class="bank-card__field" placeholder="MM" maxlength="2" pattern="[0-9]{2}" name="mm-card" id="MM" required>
+                  </label>
+                  <span class="bank-card__separator">/</span>
+                  <label class="bank-card__label bank-card__year">
+                    <span class="bank-card__hint">Year</span>
+                    <input type="text" class="bank-card__field" placeholder="YY" maxlength="2" pattern="[0-9]{2}" name="year-card" id="YY" required>
+                  </label>
+                </div>
+              </div>
+              <div class="bank-card__side bank-card__side_back">
+                <div class="bank-card__inner">
+                  <label class="bank-card__label bank-card__cvc">
+                    <span class="bank-card__hint">CVV</span>
+                    <input type="text" class="bank-card__field" placeholder="CVV" maxlength="3" pattern="[0-9]{3}" name="cvc-card" id="cvv" required>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button class="btn bg-dark text-white btn-lg" id="btn">Enviar</button>
+            </div>
+          </form>
         </div>
-        <div class="bank-card__side bank-card__side_back">
-          <div class="bank-card__inner">
-            <label class="bank-card__label bank-card__cvc">
-              <span class="bank-card__hint">CVV</span>
-              <input type="text" class="bank-card__field" placeholder="CVV" maxlength="3" pattern="[0-9]{3}" name="cvc-card" id="cvv" required>
-            </label>
+      </div>
+      <div class="col">
+        <div class="card border-dark mb-5" style="max-width: 18rem;">
+          <div class="card-header">Datos para Demo</div>
+          <div class="card-body text-dark">
+            <p class="card-text"> N° 4373471036301103
+              <br> Nombre: Maria
+              <br> CVV: 123
+              <br> Fecha de expiración: 06/20</p>
+            <hr>
+            <p class="card-text">N° 4851519931403589
+              <br> Nombre: Juan
+              <br> CVV: 456
+              <br> Fecha de expiración: 06/22</p>
+            <hr>
+            <p class="card-text">N° 4578565808288696
+              <br> Nombre: Alejandra
+              <br> CVV: 789
+              <br> Fecha de expiración: 06/25</p>
           </div>
         </div>
       </div>
-      <div class="payment-card__footer">
-        <button class="payment-card__button" id="btn">Enviar</button>
+    </div>
+    <hr>
+    <h3>Tus primeros pasos</h3>
+    <div class="row">
+      <div class="col">
+        <p>Estructura
+          <a href="https://github.com/kamalyzl/card-validator">Github</a>
+        </p>
       </div>
-    </form>
+      <div class="col">
+        <dl>
+          <dt>Contenido</dt>
+          <dd>- public/js/index.js - contiene la libreria en su versión ES5.</dd>
+          <dd>- src/index.js - contiene la libreria en su versión ES6. public/.</dd>
+        </dl>
+      </div>
+      <div class="col">
+        <pre class="bg-light">  
+              public/
+              ├── js/
+              │   ├── index.js
+              │   ├
+              src/
+              ├── index.js              
+            </pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        Instalación
+      </div>
+      <div class="col">
+        <dl>
+          <dt>Pasos</dt>
+          <dd>- Descargar el archivo
+            <code>index.js</code>.</dd>
+          <dd>- Copiar el archivo
+            <code>index.js</code> a la carpeta donde tienes los archivos js.</dd>
+          <dd>- Agregar archivo en un documento
+            <code>html</code> como un
+            <code>script</code>.</dd>
+        </dl>
+      </div>
+      <div class="col">
+        <pre class="bg-light">            
+              &lt;script src="index.js"&gt;&lt;/script&gt;
+            </pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <p>Uso </p>
+      </div>
+      <div class="col">
+        <dl>
+          <dt>Métodos</dt>
+          <dd>- Ingresar el número de tarjeta, fecha, nombre y CVV como parámetro.</dd>
+          <dd>- El resultado será un booleano (true o false).</dd>
+        </dl>
+      </div>
+
+      <div class="col">
+        <pre class="bg-light">  
+          <code>card.validCard('');</code><br>        
+          <code>card.validName('');</code><br>    
+          <code>card.validCvv('');</code><br>   
+          <code>card.validExp('');</code><br>
+          </pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <p>Tener en cuenta </p>
+      </div>
+      <div class="col">
+        <dl>
+          <dd>Para que puedas validar correctamente, necesitas anexar las funciones con una data, puedes crearla o usar un API,
+            te dejamos un ejemplo de la data que usamos para este demo.</dd>      
+        </dl>
+      </div>
+
+      <div class="col">
+        <pre class="bg-light">  
+           
+              const persona = [
+              {
+                number: '4373471036301103',
+                name: 'Maria',
+                cvv: '123',
+                yy: '20',
+                mm: '06'
+            
+              }, {
+                number: '4851519931403589',
+                name: 'Juan',
+                cvv: '456',
+                yy: '22',
+                mm: '06'
+            
+            
+              }, {
+                number: '4578565808288696',
+                name: 'Alejandra',
+                cvv: '789',
+                yy: '25',
+                mm: '06'
+            
+            
+              }
+            ];
+          
+        </pre>
+      </div>
+    </div>
   </div>
-  <div class="footer">
-    <a class="melnik909" rel="noopener noreferrer">Gracias por la preferencia</a>
-  </div>
 
+  <footer class="container-fluid mt-4">
+    <div class="row bg-dark text-white">
+      <blockquote class="blockquote text-center ml-5">
+        <p class="mb-0"> Diseñado y construido con todo el amor del mundo. validCard.js es libremente distribuible bajo los términos de la
+          licencia de MIT.</p>
+        <footer class="blockquote-footer">Contribuidores
+          <cite title="Source Title">
+            <i class="fas fa-copyright"></i>Kamaly y
+            <i class="fas fa-copyright"></i>Gessenia</cite>
+        </footer>
+      </blockquote>
+    </div>
+  </footer>
 
+  <!-- Para realizar pruebas - ES6 -->
+  <!-- <script src="../src/data.js"></script>
+  <script src="../src/index.js"></script>
+  <script src="../src/app.js"></script> -->
 
-  <!-- Aqui está la versión ES6 - Esta habilitada para hacer pruebas -->
-  <!-- <script src="../src/index.js"></script> -->
-  <!-- <script src="../src/data.js"></script> -->
-  <!-- <script src="../src/app.js"></script> -->
-  <!-- Enlazamos libreria-->
-  <script src="js/index.js"></script>
+  <!-- Enlazando E5 -->
   <script src="js/data.js"></script>
+  <script src="js/index.js"></script>
   <script src="js/app.js"></script>
+
 </body>
 
 </html>
