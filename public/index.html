@@ -45,14 +45,14 @@
                 <div class="bank-card__inner">
                   <label class="bank-card__label bank-card__label_number">
                     <span class="bank-card__hint">Número de tarjeta</span>
-                    <input type="text" class="bank-card__field" placeholder="Ej: xxxx xxxx xxxx xxxx" pattern="[0-9]{16}" name="number-card"
+                    <input type="text" class="bank-card__field" placeholder="Número de tarjeta" pattern="[0-9]{16}" name="number-card"
                       id="cn" required>
                   </label>
                 </div>
                 <div class="bank-card__inner">
                   <label class="bank-card__label bank-card__label_holder">
                     <span class="bank-card__hint">Nombre completo</span>
-                    <input type="text" class="bank-card__field" placeholder="Nombre" pattern="[A-Za-z, ]{2,}" name="holder-card" id="name" required>
+                    <input type="text" class="bank-card__field" placeholder="Nombre completo" pattern="[A-Za-z, ]{2,}" name="holder-card" id="name" required>
                   </label>
                 </div>
                 <div class="bank-card__inner">
@@ -186,13 +186,12 @@
       <div class="col">
         <dl>
           <dd>Para que puedas validar correctamente, necesitas anexar las funciones con una data, puedes crearla o usar un API,
-            te dejamos un ejemplo de la data que usamos para este demo.</dd>      
+            te dejamos un ejemplo de la data que usamos para este demo.</dd>
         </dl>
       </div>
 
       <div class="col">
         <pre class="bg-light">  
-           
               const persona = [
               {
                 number: '4373471036301103',
@@ -215,8 +214,6 @@
                 cvv: '789',
                 yy: '25',
                 mm: '06'
-            
-            
               }
             ];
           
@@ -228,8 +225,8 @@
   <footer class="container-fluid mt-4">
     <div class="row bg-dark text-white">
       <blockquote class="blockquote text-center ml-5">
-        <p class="mb-0"> Diseñado y construido con todo el amor del mundo. validCard.js es libremente distribuible bajo los términos de la
-          licencia de MIT.</p>
+        <p class="mb-0">validCard.js es libremente distribuible bajo los términos de la licencia de MIT. Diseñado y construido con todo el
+          amor del mundo. </p>
         <footer class="blockquote-footer">Contribuidores
           <cite title="Source Title">
             <i class="fas fa-copyright"></i>Kamaly y
@@ -240,15 +237,15 @@
   </footer>
 
   <!-- Para realizar pruebas - ES6 -->
-  <!-- <script src="../src/data.js"></script>
+  <script src="../src/data.js"></script>
   <script src="../src/index.js"></script>
-  <script src="../src/app.js"></script> -->
+  <script src="../src/app.js"></script>
 
-  <!-- Enlazando E5 -->
-  <script src="js/data.js"></script>
+  <!--   <!-- Enlazando E5 -->
+  <!--  <script src="js/data.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/app.js"></script>
-
+  <script src="js/app.js"></script> 
+ -->
 </body>
 
 </html>
