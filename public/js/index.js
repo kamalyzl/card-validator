@@ -3,15 +3,15 @@
 // Utilizamos el patron IIFE, Expresión de función inmediatamente invocada, función anonima auto ejecutable
 // Así prevenimos el Hoisting
 
-(function() {
+(function () {
   // Objeto Card contiene función ValidCard
   var card = {
     validCard: function validCard(number) {
       var sum = 0,
-        alt = false,
-        i = number.length - 1,
-        // recorriendo de manera inversa
-        num = void 0;
+          alt = false,
+          i = number.length - 1,
+          // recorriendo de manera inversa
+      num = void 0;
       if (number.length !== 16) {
         return false;
       }
@@ -36,6 +36,6 @@
   };
   // Para proteger los datos realizamos lo siguiente
   if (typeof window.card === 'undefined') {
-    window.card = window.$ = card;
+    window.card = window.card = card;
   } else console.log('hiciste uso de la libreria');
 })();
