@@ -1,12 +1,10 @@
 
 // Llamando al DOM
 const btn = document.getElementById('btn');
-const cardNumber = document.getElementById('cn');
-
-//Declaramos las variables
-name = document.getElementById('name');
-yy = document.getElementById('YY');
-mm = document.getElementById('MM');
+let cardNumber = document.getElementById('cn'),
+name = document.getElementById('name'),
+yy = document.getElementById('YY'),
+mm = document.getElementById('MM'),
 cvv = document.getElementById('cvv');
 
 // Trayendo valores de los inputs
@@ -37,13 +35,17 @@ btn.addEventListener('click', function() {
 
 //Creando las validaciones para el input Number of card
 var inputNumber = document.getElementById('cn');
+let inputString = document.getElementById('name');
 
 const onlyNum = /[^0-9]/g;
 const onlypLet = /[^a-zA-ZÑñáéíóúÁÉÍÓÚ\s]*$/g;
 
 inputNumber.addEventListener('input', function () {
   inputNumber.value = inputNumber.value.replace(onlyNum, '');
+});
 
+inputString.addEventListener('input', function (){
+  inputString.value = inputString.value.replace(onlyLet,'');
 });
 
 
