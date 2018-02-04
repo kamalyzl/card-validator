@@ -1,24 +1,17 @@
 const cl = console.log;
-(function() {
+(function () {
   card = {
-    // Funcion que valida la longitud del input ingresado por el usuario
     validNumber(input) {
       let regex = /^\d*$/;
       if (!input.search(regex))
         return input;
       else return false;
     },
-    validName(input) {
+    validText(input) {
       let regex = /^[a-zA-Z\s]*$/;
       if (regex.test(cadena))
         return cadena;
       else return false;
-    },
-    validCvv(input) {
-      let regex = /^\d{3}$/;
-      if (regex.test(input)) return input
-      // cvv.setAttribute('disabled', true);       
-      else cl('errorCvv')
     },
     validMonth(input) {
       let regex = /^\d{2}$/;
@@ -49,7 +42,7 @@ const cl = console.log;
           return true;
           console.log('Es una tarjeta valida');
         }
-      } else return cl('la tarjet es invalida');
+      } else return false;
     }
   };
 })();

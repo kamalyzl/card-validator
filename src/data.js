@@ -14,13 +14,5 @@ const persona = [
     mm: '06'
 
 
-  }, {
-    number: '4578565808288696',
-    name: 'Alejandra',
-    cvv: '789',
-    yy: '25',
-    mm: '06'
-
-
   }
 ];
