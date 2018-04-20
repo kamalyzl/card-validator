@@ -1,5 +1,24 @@
 # Libreria ValidCard
 
+ValidCard  es un libreria basada en el algoritmo de  [Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn), te ayudará a saber si una tarjeta de crédito es válida o invalida. Puedes usar datos como: fecha de vencimiento, código de verificación (cvv) y nombre completo que aparece en la tarjeta.
+
+
+![valid](https://user-images.githubusercontent.com/32285958/39020379-4309b664-43f2-11e8-8955-c3927ff9268b.PNG)
+
+## Lo que se utilizó en este proyecto
+
+* Html 5.2
+* Css
+* EDGrid
+* ES6
+* Boostrap
+* Fontawesome
+
+## Desarrollado para 
+[Laboratoria](http://laboratoria.la)
+
+*Autor: Kamaly Zapana Lorenzo*
+
 
 - [Contenido](#contenido)
 - [Instrucciones de instalación](#instrucciones-de-instalación)
@@ -47,6 +66,4 @@ src/
 
 
  
-Colaboradores:
-* **Jackeline Gessenia Canales** https://github.com/JackelineGCP
-* **Kamaly Zapana Lorenzo** https://github.com/kamalyzl
+ 
